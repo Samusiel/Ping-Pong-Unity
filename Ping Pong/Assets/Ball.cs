@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ball : MonoBehaviour {
+public class Ball : UnityEngine.Networking.NetworkBehaviour
+{
 
     private float m_sx;
     private float m_sy;
@@ -26,6 +27,8 @@ public class Ball : MonoBehaviour {
         //-- Get Scores Texts
         m_player1ScoreText = GameObject.Find("Player1Score").gameObject.GetComponent<Text>();
         m_player2ScoreText = GameObject.Find("Player2Score").gameObject.GetComponent<Text>();
+
+        transform.position = new Vector3(0.0f, 0.0f, 0.0f);
     }
 	
 	// Update is called once per frame
