@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Control : MonoBehaviour {
+public class ControlPlayer1 : MonoBehaviour {
 
     private float m_prevPos;
 
